@@ -1,0 +1,34 @@
+@use "../../../sass/_index" as *
+
+.navdialog
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: $dialog-bg
+    border: none
+
+.mobile-navlinks-container
+    width: 75vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    padding: 2rem
+    gap: 54px
+    background: $light
+
+.mobile-navlinks__ul
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+.mobile-navlinks__li > a
+    font-weight: 700
+    font-size: 1.125rem
+    line-height: 26px
+    color: $font-hover
+    text-decoration: none
+    text-transform: capitalize
+    &:hover
+        color: $font-clr

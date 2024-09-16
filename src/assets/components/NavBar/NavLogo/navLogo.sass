@@ -1,0 +1,14 @@
+@use "../../../sass/_index" as *
+
+.navlogo-container
+    display: flex
+    flex-direction: row
+    gap: 1rem
+.mobilenav-toggler
+    display: block
+@media (min-width: 48rem)
+    .mobilenav-toggler
+        display: none
+    .navlogo-container
+        margin-left: 0
+        margin-right: 56.5px

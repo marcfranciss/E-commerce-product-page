@@ -1,0 +1,27 @@
+@use "../../sass/_index" as *
+
+/* Mobile NavBar padding sizes*/
+$navbar-px: 1.5rem
+$navbar-pt: 19px
+$navbar-pb: 25px
+
+/* Dekstop NavBar padding sizes*/
+$navbar-px-l: 165px
+$navbar-pt-l: 28px
+$navbar-pb-l: 34px
+
+.navbar-container
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding-inline: $navbar-px
+    padding-top: $navbar-pt
+    padding-bottom: $navbar-pb
+
+@media (min-width: 68rem)
+    .navbar-container
+        padding-inline: $navbar-px-l
+        padding-top: $navbar-pt-l
+        padding-bottom: $navbar-pb-l

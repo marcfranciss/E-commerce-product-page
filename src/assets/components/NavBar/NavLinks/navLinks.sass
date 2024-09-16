@@ -1,0 +1,28 @@
+@use "../../../sass/_index" as *
+
+*:focus
+    outline: 2px solid $primary
+
+.navlinks-container
+    display: none
+
+@media (min-width: 48rem)
+    .navlinks-container
+        width: 100%
+        display: block
+    .navlinks__ul
+        display: flex
+        flex-direction: row
+        gap: 2rem
+
+    .navlinks__li > a
+        color: $font-clr
+        text-transform: capitalize
+        text-decoration: none
+        transition: text-decoration 0.4s ease, color 0.4s ease
+        &:hover
+            text-decoration: underline
+            text-underline-offset: 41px
+            text-decoration-color: orange
+            text-decoration-thickness: 0.25rem
+            color: $font-hover
