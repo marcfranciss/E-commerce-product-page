@@ -98,8 +98,42 @@ button {
   justify-content: center;
   align-items: center;
 }
-button:active {
+button.scaleOnClick:active {
   transform: scale(95%);
+}
+
+.slideRight > img {
+  animation: slideRight 0.7s ease infinite;
+}
+
+.slideLeft > img {
+  animation: slideLeft 0.7s ease infinite;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+button[disabled] {
+  background: hsl(0, 0%, 50%) !important;
+  color: hsla(0, 0%, 0%, 0.2) !important;
+  cursor: default;
 }
 
 .navdialog {
@@ -110,6 +144,7 @@ button:active {
   height: 100vh;
   background: hsla(0, 0%, 0%, 0.5);
   border: none;
+  z-index: 10;
 }
 
 .mobile-navlinks-container {
@@ -138,4 +173,4 @@ button:active {
 }
 .mobile-navlinks__li > a:hover {
   color: hsl(219, 9%, 45%);
-}/*# sourceMappingURL=NavDialog.css.map */
+}/*# sourceMappingURL=navDialog.css.map */

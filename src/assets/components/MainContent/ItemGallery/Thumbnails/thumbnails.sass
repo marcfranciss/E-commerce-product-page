@@ -1,0 +1,34 @@
+@use "../../../../sass/_index" as *
+
+.thumbnail-content
+    display: none
+
+@media (min-width: 68rem)
+    .thumbnail-content
+        display: flex
+        flex-direction: row
+        gap: 31px
+        > .preview-img__controler
+            width: 88px
+            height: 88px
+            overflow: hidden
+            border-radius: 10px
+            position: relative
+            &:hover::after
+                content: ""
+                position: absolute
+                width: 100%
+                height: 100%
+                border-radius: 10px
+                background-color: hsla(0, 0%, 100%, 50%)
+
+        > .preview-img__controler.active-index
+            border: 2px solid $accent
+            outline: none
+            &::after
+                content: ""
+                position: absolute
+                width: 100%
+                height: 100%
+                border-radius: 10px
+                background-color: hsla(0, 0%, 100%, 75%)

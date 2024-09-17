@@ -1,0 +1,94 @@
+@use "../../../sass/_index" as *
+
+#mobile-cart-dialog
+    border: none
+    outline: none
+    top: 0.5rem
+    left: 0
+    margin-inline: auto
+    border-radius: 10px
+    background: $light
+    padding-block: 1.5rem
+    min-height: 256px
+    width: calc( 100% - 0.5rem )
+    max-width: 360px
+    box-shadow: 0px 0px 50px -20px hsla(220, 13%, 13%, 50.31%)
+    z-index: 2
+
+.mobile-cart-container
+    display: flex
+    flex-direction: column
+    > *
+        padding-inline: 1.5rem
+
+.mobile-cart__header
+    padding-bottom: 27px
+    border-bottom: 1px solid hsl(219, 35%, 92%)
+    > .cart-header__h2
+        font-size: 1rem
+        font-weight: 700
+        color: $font-hover
+
+.mobile-cart__items
+    margin-top: 1.5rem
+    display: flex
+    flex-direction: row
+    gap: 1rem
+    > .cart-item__img
+        border-radius: 0.25rem
+        overflow: hidden
+        width: 50px
+        height: 50px
+
+.cart-item__details
+    display: flex
+    flex-direction: column
+    > .cart-item__name
+        font-size: 1rem
+        line-height: 26px
+        font-weight: 400
+        color: $font-clr
+    > .cart-item__prices
+        display: flex
+        flex-direction: row
+        gap: 10px
+        > .original-price, .item-quantity
+            font-size: 1rem
+            line-height: 26px
+            font-weight: 400
+            color: $font-clr
+        > .total-price
+            font-size: 1rem
+            line-height: 26px
+            font-weight: 700
+            color: $font-hover
+
+.btn-checkout
+    background: $primary
+    margin-top: 1.5rem
+    height: 56px
+    width: 312px
+    border-radius: 10px
+    font-weight: 700
+    font-size: 1rem
+    color: $font-hover
+
+.empty-cart
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 158px
+    > .empty-cart__text
+        font-weight: 700
+        font-size: 1rem
+        line-height: 26px
+        color: $font-clr
+
+@media (min-width: 68rem)
+    #mobile-cart-dialog
+        margin-inline: 0
+        top: -18px
+        align-self: flex-end
+        left: calc( 100% - (360px - 89px) )

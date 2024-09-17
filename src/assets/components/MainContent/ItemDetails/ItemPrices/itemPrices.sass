@@ -1,0 +1,35 @@
+@use "../../../../sass/_index" as *
+
+.item-price-container
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    > .item-price__discounted
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 23px
+        > .discounted
+            color: $font-hover
+            font-weight: 700
+            font-size: 1.75rem
+            line-height: 35px
+        > .discount-percent
+            background: $gray
+            color: $light
+            font-size: 1rem
+            font-weight: 700
+            line-height: 20px
+            padding: 4px 9px 3px 10px
+            border-radius: 6px
+    > .item-price__original
+        font-size: 1rem
+        line-height: 26px
+        font-weight: 700
+        color: $font-clr
+        text-decoration: line-through
+
+@media (min-width: 68rem)
+    .item-price-container
+        flex-direction: column
+        gap: 3px

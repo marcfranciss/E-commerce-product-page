@@ -1,4 +1,3 @@
-import NavDialog from "../Dialogs/NavDialog/NavDialog";
 import "./navBar.sass";
 import NavLinks from "./NavLinks/NavLinks";
 import NavLogo from "./NavLogo/NavLogo";

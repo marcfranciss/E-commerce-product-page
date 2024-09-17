@@ -5,5 +5,33 @@ button
     display: flex
     justify-content: center
     align-items: center
-    &:active
+    &.scaleOnClick:active
         transform: scale(95%)
+
+.slideRight
+    > img
+        animation: slideRight 0.7s ease infinite
+.slideLeft
+    > img
+        animation: slideLeft 0.7s ease infinite
+
+@keyframes slideRight
+    from
+        transform: translateX(0%)
+        opacity: 1
+    to
+        transform: translateX(50%)
+        opacity: 0
+
+@keyframes slideLeft
+    from
+        transform: translateX(0%)
+        opacity: 1
+    to
+        transform: translateX(-50%)
+        opacity: 0
+
+button[disabled]
+    background: hsl(0, 0%, 50%) !important
+    color: hsla(0, 0%, 0%, 20%) !important
+    cursor: default

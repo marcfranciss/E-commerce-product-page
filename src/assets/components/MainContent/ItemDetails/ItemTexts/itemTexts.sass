@@ -1,0 +1,36 @@
+@use "../../../../sass/_index" as *
+
+.item-details__texts
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    margin-bottom: -9px
+
+    > .item-details__h1
+        text-transform: uppercase
+        color: $font-clr
+        font-weight: 700
+        letter-spacing: 1.85px
+        line-height: normal
+        font-size: clamp(0.75rem, 0.728rem + 0.0939vw, 0.8125rem)
+        margin-bottom: -3px
+    > .item-details__h2
+        color: $font-hover
+        font-weight: 700
+        line-height: clamp(2rem, 1.6479rem + 1.5023vw, 3rem)
+        font-size: clamp(1.75rem, 1.3979rem + 1.5023vw, 2.75rem)
+    > .item-details__p
+        color: $font-clr
+        font-weight: 400
+        line-height: clamp(1.5625rem, 1.5625rem + 0vw, 1.5625rem)
+        font-size: clamp(0.9375rem, 0.9155rem + 0.0939vw, 1rem)
+
+@media (min-width: 68rem)
+    .item-details__texts
+        margin-bottom: 0
+        > .item-details__h1
+            margin-bottom: 0.5rem
+        > .item-details__h2
+            margin-bottom: 1rem
+        > .item-details__p
+            margin-bottom: -0.5rem

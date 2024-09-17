@@ -1,0 +1,16 @@
+@use "../../sass/_index" as *
+
+.main-content
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+    position: relative
+
+@media (min-width: 68rem)
+    .main-content
+        flex-direction: row
+        gap: 125px
+        padding-block: 90px 132px
+        border-top: 1px solid hsla(219, 35%, 92%, 100%)
+        margin-inline: 165px
+        padding-inline: 3rem
