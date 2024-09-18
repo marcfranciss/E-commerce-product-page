@@ -21,6 +21,7 @@ const Snackbar = ({ message, visible, onClose }: SnackbarProps) => {
   return (
     <div
       id='snackbar'
+      role='dialog'
       className={`snackbar ${visible ? "show" : ""}`}
       aria-live={visible ? "assertive" : "off"}
       aria-atomic={visible ? "true" : "false"}>

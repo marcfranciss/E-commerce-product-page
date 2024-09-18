@@ -28,6 +28,7 @@ const MobileCartDialog = () => {
 
   return (
     <dialog
+      role='dialog'
       id='mobile-cart-dialog'
       open={isMobileCartDialogOpen}
       onKeyDown={(e) => {
@@ -37,8 +38,7 @@ const MobileCartDialog = () => {
       }}
       aria-live={isMobileCartDialogOpen ? "assertive" : "off"}
       aria-atomic={isMobileCartDialogOpen}
-      aria-modal='true'
-      aria-label='Cart content'>
+      aria-modal='true'>
       <div className='mobile-cart-container'>
         <div className='mobile-cart__header'>
           <h2 className='cart-header__h2'>Cart</h2>

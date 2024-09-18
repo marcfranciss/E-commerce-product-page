@@ -8,6 +8,7 @@ const NavDialog = () => {
   const { isNavDialogOpen, setIsNavDialogOpen } = useAppContext();
   return (
     <dialog
+      role='dialog'
       id='navdialog'
       className='navdialog'
       open={isNavDialogOpen}
@@ -19,8 +20,7 @@ const NavDialog = () => {
       }}
       aria-live={isNavDialogOpen ? "assertive" : "off"}
       aria-atomic={isNavDialogOpen}
-      aria-modal='true'
-      aria-label='Navigation links'>
+      aria-modal='true'>
       <nav className='mobile-navlinks-container'>
         <CloseButton
           btnClick={() => setIsNavDialogOpen(false)}

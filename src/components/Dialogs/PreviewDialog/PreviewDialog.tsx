@@ -8,6 +8,7 @@ const PreviewDialog = () => {
     <>
       {isPreviewDialogOpen && (
         <dialog
+          role='dialog'
           open={isPreviewDialogOpen}
           id='preview-dialog'
           className='preview-dialog'
@@ -18,8 +19,7 @@ const PreviewDialog = () => {
           }}
           aria-live={isPreviewDialogOpen ? "assertive" : "off"}
           aria-atomic={isPreviewDialogOpen}
-          aria-modal='true'
-          aria-label='Preview dialog'>
+          aria-modal='true'>
           <div className='preview-dialog-container'>
             <CloseButton
               btnClick={() => setIsPreviewDialogOpen(false)}
