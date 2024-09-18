@@ -1,0 +1,41 @@
+@use "../../../sass/_index" as *
+// .preview-dialog
+//     display: none
+
+// @media (min-width: 68rem)
+.preview-dialog
+    position: fixed
+    top: 0
+    left: 0
+    min-width: 100%
+    min-height: 100%
+    background: $dialog-bg
+    z-index: 999
+    > .preview-dialog-container
+        position: relative
+        max-width: 550px
+        height: 100vh
+        margin-inline: auto
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        > .preview-content
+            > .preview-content__img
+                width: 550px
+                height: 550px
+                cursor: default
+                > button
+                    display: flex
+                    height: 56px
+                    width: 56px
+                > .preview-nav__prev
+                    left: -28px !important
+                > .preview-nav__next
+                    right: -28px !important
+            > .thumbnail-content
+                justify-content: center
+
+@media (max-width: 48rem)
+    .preview-dialog
+        display: none

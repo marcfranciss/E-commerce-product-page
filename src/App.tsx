@@ -1,10 +1,12 @@
-import MainContent from "./assets/components/MainContent/MainContent";
-import NavBar from "./assets/components/NavBar/NavBar";
-import { AppProviderProps } from "./assets/context/AppContext";
+import { AppProviderProps } from "@components/context/AppContext";
+import PreviewDialog from "@components/Dialogs/PreviewDialog/PreviewDialog";
+import MainContent from "@components/MainContent/MainContent";
+import NavBar from "@components/NavBar/NavBar";
 
 function App() {
   return (
     <AppProviderProps>
+      <PreviewDialog />
       <NavBar />
       <MainContent />
     </AppProviderProps>

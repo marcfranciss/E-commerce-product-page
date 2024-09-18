@@ -1,0 +1,58 @@
+@use "../../../../sass/index" as *
+
+.item-actions
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+    > .button-group
+        width: 100%
+        height: 3.5rem
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        background-color: hsl(220, 59%, 98%)
+        border-radius: 10px
+        overflow: hidden
+        > *
+            width: calc( 100% / 3 )
+            height: 100%
+            flex-wrap: wrap
+            align-content: center
+            text-align: center
+            padding-inline: 1rem
+
+        > .item-count
+            font-weight: 700
+            font-size: 1rem
+            color: $font-hover
+
+    > .atc-action
+        height: 3.5rem
+        max-width: 327px
+        min-width: 272px
+        background: $primary
+        border-radius: 10px
+        display: flex
+        flex-direction: row
+        gap: 1rem
+        font-weight: 700
+        font-size: 1rem
+        color: $font-hover
+        margin-bottom: 88px
+        &:not(:disabled)
+            box-shadow: 0px 20px 50px -20px $primary
+        &:hover
+            background: $hover-clr
+
+@media (min-width: 68rem)
+    .item-actions
+        flex-direction: row
+        > .button-group
+            padding-block: 0
+            padding-inline: 0
+            width: 157px
+            height: 56px
+        > .atc-action
+            margin-bottom: 0

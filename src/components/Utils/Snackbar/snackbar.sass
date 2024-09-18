@@ -1,0 +1,24 @@
+@use "../../../sass/_index" as *
+.snackbar
+    visibility: hidden
+    min-width: 250px
+    margin-left: -125px
+    background-color: $dark
+    color: $light
+    text-align: center
+    border-radius: 0.5rem
+    padding: 1rem
+    position: fixed
+    z-index: 1
+    display: flex
+    flex-direction: row
+    gap: 2rem
+    top: 30px
+    left: 50%
+    font-size: 17px
+    transition: visibility 0s, opacity 0.5s linear
+    opacity: 0
+
+    &.show
+        visibility: visible
+        opacity: 1
